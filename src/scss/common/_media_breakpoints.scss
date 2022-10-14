@@ -2,40 +2,40 @@
   @media screen and (max-width: $breakpoint_b) {
     @content
   }
-}
+};
 
 @mixin larger_desktop() {
   @media screen and (max-width: $breakpoint_xxl) {
     @content
   }
-}
+};
 
 @mixin large_desktop() {
   @media screen and (max-width: $breakpoint_xl) {
     @content
   }
-}
+};
 
 @mixin desktop() {
   @media screen and (max-width: $breakpoint_lg) {
     @content
   }
-}
+};
 
 @mixin tablets() {
   @media screen and (max-width: $breakpoint_md) {
     @content
   }
-}
+};
 
 @mixin landscape_phone() {
   @media screen and (max-width: $breakpoint_sm) {
     @content
   }
-}
+};
 
 @mixin portrait_phone() {
   @media screen and (max-width: $breakpoint_xs) {
     @content
   }
-}
+};

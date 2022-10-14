@@ -19,7 +19,7 @@
       &:before {
         content: url('../img/Shape.svg');
         position: absolute;
-        @include position-t-l(17px, 59px);
+        @include position-t-l(30px, 59px);
       }
 
       &:after {

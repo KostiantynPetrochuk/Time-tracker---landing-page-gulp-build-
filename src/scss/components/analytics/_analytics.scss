@@ -32,13 +32,13 @@
         &:before {
           content: url('../img/Shape.svg');
           position: absolute;
-          @include position-t-l(20px, -27px);
+          @include position-t-l(28px, -2px);
         }
 
         &:after {
           content: 'Reporting';
           position: absolute;
-          @include position-t-l(-1px, 0);
+          @include position-t-l(-1px, 12px);
         }
       }
     }

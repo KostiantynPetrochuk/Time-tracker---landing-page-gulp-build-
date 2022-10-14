@@ -87,7 +87,7 @@
     position: relative;
 
     &._active {
-      &.header-burger__item:nth-child(1) {
+      & .header-burger__item:nth-child(1) {
         top: 15px;
         transition: 0.5s;
         transform: rotate(0deg);
@@ -95,11 +95,11 @@
         animation-delay: 0.5s;
       }
 
-      &.header-burger__item:nth-child(2) {
+      & .header-burger__item:nth-child(2) {
         @include translate-X(-100px, 0);
       }
 
-      &.header-burger__item:nth-child(3) {
+      & .header-burger__item:nth-child(3) {
         bottom: 14px;
         transition: 0.5s;
         transform: rotate(0deg);
