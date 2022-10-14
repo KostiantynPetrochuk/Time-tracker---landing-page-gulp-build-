@@ -1,10 +1,14 @@
-@include big_desktop { // 1790px
+@include big_desktop {
+
+  // 1790px
   .features {
     //......
   }
 }
 
-@include larger_desktop { // 1600px
+@include larger_desktop {
+
+  // 1600px
   .features {
     &-wrapper__img {
       &:nth-child(1) {
@@ -18,7 +22,9 @@
   }
 }
 
-@include large_desktop { // 1200px
+@include large_desktop {
+
+  // 1200px
   .features {
     &-wrapper {
       margin-top: 0;
@@ -117,7 +123,9 @@
   }
 }
 
-@include desktop { // 1024px
+@include desktop {
+
+  // 1024px
   .features {
     &-title__item:nth-child(1) {
       font-size: 40px;
@@ -136,7 +144,9 @@
   }
 }
 
-@include tablets { // 768px
+@include tablets {
+
+  // 768px
   .features {
     &-inner {
       padding-top: 20px;
@@ -174,11 +184,14 @@
   }
 }
 
-@include landscape_phone { // 555px
+@include landscape_phone {
+
+  // 555px
   .features {
     margin-top: 0px;
 
     &-card {
+
       &-front,
       &-back {
         padding: 20px;
@@ -194,8 +207,29 @@
   }
 }
 
-@include portrait_phone { // 320px
+@include portrait_phone {
+
+  // 370px
   .features {
-    //......
+    &-title__item:nth-child(1) {
+      font-size: 20px;
+    }
+
+    &-card {
+
+      &-front,
+      &-back {
+        @include size(140px, 260px);
+        border-radius: 20px;
+      }
+
+      &-title:nth-child(1) {
+        font-size: 18px;
+      }
+    }
+
+    &-wrapper__img:nth-child(1)._active {
+      top: 200px;
+    }
   }
 }

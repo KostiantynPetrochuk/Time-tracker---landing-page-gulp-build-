@@ -1,4 +1,6 @@
-@include big_desktop { // 1790px
+@include big_desktop {
+
+  // 1790px
   .benefits {
     &__image {
       &:nth-child(1)._active {
@@ -33,7 +35,9 @@
   }
 }
 
-@include larger_desktop { // 1600px
+@include larger_desktop {
+
+  // 1600px
   .benefits {
     &-col {
       margin-left: 0;
@@ -79,13 +83,17 @@
   }
 }
 
-@include large_desktop { // 1200px
+@include large_desktop {
+
+  // 1200px
   .benefits {
     //......
   }
 }
 
-@include desktop { // 1024px
+@include desktop {
+
+  // 1024px
   .benefits {
     padding-bottom: 270px;
     overflow: visible;
@@ -140,7 +148,9 @@
   }
 }
 
-@include tablets { // 768px
+@include tablets {
+
+  // 768px
   .benefits {
     padding-bottom: 560px;
 
@@ -159,6 +169,7 @@
       }
 
       &__text {
+
         &:nth-child(2),
         &:nth-child(3) {
           font-size: 14px;
@@ -208,7 +219,9 @@
   }
 }
 
-@include landscape_phone { // 555px
+@include landscape_phone {
+
+  // 555px
   .benefits {
     &-col-item {
       margin-left: 20px;
@@ -221,8 +234,21 @@
   }
 }
 
-@include portrait_phone { // 320px
+@include portrait_phone {
+
+  // 370px
   .benefits {
-    //......
+    &-col {
+      flex-direction: column;
+      margin: 10px 0;
+
+      &-item {
+        margin: 10px 0 0 0;
+      }
+    }
+
+    &__image:nth-child(4) {
+      left: 10px;
+    }
   }
 }

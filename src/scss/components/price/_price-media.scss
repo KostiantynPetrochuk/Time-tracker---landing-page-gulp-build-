@@ -1,10 +1,14 @@
-@include big_desktop { // 1790px
+@include big_desktop {
+
+  // 1790px
   .price {
     //......
   }
 }
 
-@include larger_desktop { // 1600px
+@include larger_desktop {
+
+  // 1600px
   .price {
     &-cards {
       justify-content: space-around;
@@ -19,10 +23,10 @@
       grid-template-rows: 0.5fr 0.5fr 0.5fr 1fr;
       grid-template-columns: 1fr 1fr;
       grid-template-areas:
-            "title price"
-            "info_1 info_1"
-            "info_2 info_2"
-            "link link";
+        "title price"
+        "info_1 info_1"
+        "info_2 info_2"
+        "link link";
     }
 
     &-row {
@@ -81,7 +85,9 @@
   }
 }
 
-@include large_desktop { // 1200px
+@include large_desktop {
+
+  // 1200px
   .price {
     &-top {
       margin-top: 50px;
@@ -89,7 +95,9 @@
   }
 }
 
-@include desktop { // 1024px
+@include desktop {
+
+  // 1024px
   .price {
     &-card {
       margin: 14px;
@@ -102,9 +110,12 @@
   }
 }
 
-@include tablets { // 768px
+@include tablets {
+
+  // 768px
   .price {
     &__img {
+
       &:nth-child(1),
       &:nth-child(2),
       &:nth-child(3) {
@@ -123,7 +134,9 @@
   }
 }
 
-@include landscape_phone { // 555px
+@include landscape_phone {
+
+  // 555px
   .price {
     &__title {
       font-size: 23px;
@@ -131,8 +144,25 @@
   }
 }
 
-@include portrait_phone { // 320px
+@include portrait_phone {
+
+  // 320px
   .price {
-    //......
+    &-card {
+      @include size(214px, 250px);
+    }
+
+    &__title {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    &-checkbox {
+      margin: 40px 0;
+
+      &__title {
+        font-size: 22px;
+      }
+    }
   }
 }

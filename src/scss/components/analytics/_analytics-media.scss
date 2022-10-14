@@ -1,10 +1,14 @@
-@include big_desktop { // 1790px
+@include big_desktop {
+
+  // 1790px
   .analytics {
     //......
   }
 }
 
-@include larger_desktop { // 1600px
+@include larger_desktop {
+
+  // 1600px
   .analytics {
     &-inner {
       grid-template-rows: 1fr 1fr;
@@ -57,13 +61,17 @@
   }
 }
 
-@include large_desktop { // 1200px
+@include large_desktop {
+
+  // 1200px
   .analytics {
     //......
   }
 }
 
-@include desktop { // 1024px
+@include desktop {
+
+  // 1024px
   .analytics {
     &-inner {
       grid-template-rows: 0.6fr 1fr;
@@ -107,7 +115,9 @@
   }
 }
 
-@include tablets { // 768px
+@include tablets {
+
+  // 768px
   .analytics {
     &-right {
       padding-top: 80px;
@@ -164,7 +174,9 @@
   }
 }
 
-@include landscape_phone { // 555px
+@include landscape_phone {
+
+  // 555px
   .analytics {
     &-wrapper {
       margin-top: 134px;
@@ -211,8 +223,58 @@
   }
 }
 
-@include portrait_phone { // 320px
+@include portrait_phone {
+
+  // 370px
   .analytics {
-    //......
+    &-inner {
+      grid-template-rows: 0.4fr 1fr;
+    }
+
+    &-right {
+      padding-top: 0;
+    }
+
+    &-row {
+      flex-direction: column;
+
+      &-info {
+        margin: 10px 0 0 0;
+      }
+    }
+
+    &-left__img {
+      &:nth-child(2) {
+        left: 70px;
+      }
+
+      &:nth-child(3) {
+        left: -10px;
+      }
+
+      &:nth-child(4) {
+        left: 198px;
+      }
+
+      &:nth-child(5) {
+        left: 12px;
+      }
+
+      &:nth-child(6) {
+        left: 137px;
+      }
+
+      &:nth-child(7) {
+        left: 111px;
+      }
+
+      &:nth-child(8) {
+        display: none;
+      }
+    }
+
+    &-title__item {
+      font-size: 23px;
+    }
   }
 }

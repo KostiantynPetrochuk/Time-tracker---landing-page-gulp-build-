@@ -1,4 +1,6 @@
-@include big_desktop { // 1790px
+@include big_desktop {
+
+  // 1790px
   .apps {
     &__img {
       &:nth-child(1) {
@@ -24,7 +26,9 @@
   }
 }
 
-@include larger_desktop { // 1600px
+@include larger_desktop {
+
+  // 1600px
   .apps {
     &-inner {
       align-items: center;
@@ -52,7 +56,9 @@
   }
 }
 
-@include large_desktop { // 1200px
+@include large_desktop {
+
+  // 1200px
   .apps {
     &-inner {
       align-items: flex-start;
@@ -60,13 +66,17 @@
   }
 }
 
-@include desktop { // 1024px
+@include desktop {
+
+  // 1024px
   .apps {
     //......
   }
 }
 
-@include tablets { // 768px
+@include tablets {
+
+  // 768px
   .apps {
     &__title {
       font-size: 24px;
@@ -107,14 +117,25 @@
   }
 }
 
-@include landscape_phone { // 555px
+@include landscape_phone {
+
+  // 555px
   .apps {
     //......
   }
 }
 
-@include portrait_phone { // 320px
+@include portrait_phone {
+
+  // 370px
   .apps {
-    //......
+    &-inner {
+      margin-left: 0px;
+      padding: 20px 0;
+    }
+
+    &__img:nth-child(2) {
+      height: 50px;
+    }
   }
 }

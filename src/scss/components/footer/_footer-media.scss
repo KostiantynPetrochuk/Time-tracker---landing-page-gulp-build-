@@ -1,22 +1,30 @@
-@include big_desktop { // 1790px
+@include big_desktop {
+
+  // 1790px
   .footer {
     //......
   }
 }
 
-@include larger_desktop { // 1600px
+@include larger_desktop {
+
+  // 1600px
   .footer {
     //......
   }
 }
 
-@include large_desktop { // 1200px
+@include large_desktop {
+
+  // 1200px
   .footer {
     //......
   }
 }
 
-@include desktop { // 1024px
+@include desktop {
+
+  // 1024px
   .footer {
     height: initial;
 
@@ -36,7 +44,9 @@
   }
 }
 
-@include tablets { // 768px
+@include tablets {
+
+  // 768px
   .footer {
     &-top {
       display: flex;
@@ -61,14 +71,24 @@
   }
 }
 
-@include landscape_phone { // 555px
+@include landscape_phone {
+
+  // 555px
   .footer {
     //......
   }
 }
 
-@include portrait_phone { // 320px
+@include portrait_phone {
+
+  // 320px
   .footer {
-    //......
+    &-bot {
+      font-size: 14px;
+    }
+
+    &-top {
+      padding: 30px 0;
+    }
   }
 }

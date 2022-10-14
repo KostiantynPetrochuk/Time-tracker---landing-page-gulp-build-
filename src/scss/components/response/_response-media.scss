@@ -1,10 +1,14 @@
-@include big_desktop { // 1790px
+@include big_desktop {
+
+  // 1790px
   .response {
     //......
   }
 }
 
-@include larger_desktop { // 1600px
+@include larger_desktop {
+
+  // 1600px
   .response {
     &__img:nth-child(3) {
       left: 430px;
@@ -12,7 +16,9 @@
   }
 }
 
-@include large_desktop { // 1200px
+@include large_desktop {
+
+  // 1200px
   .response {
     padding-top: 50px;
 
@@ -45,7 +51,9 @@
   }
 }
 
-@include desktop { // 1024px
+@include desktop {
+
+  // 1024px
   .response {
     &-row {
       margin-top: 260px;
@@ -78,7 +86,9 @@
   }
 }
 
-@include tablets { // 768px
+@include tablets {
+
+  // 768px
   .response {
     &-title__item {
       &:nth-child(1) {
@@ -129,14 +139,18 @@
   }
 }
 
-@include landscape_phone { // 555px
+@include landscape_phone {
+
+  // 555px
   .response {
     //......
   }
 }
 
-@include portrait_phone { // 320px
+@include portrait_phone {
+
+  // 320px
   .response {
-    //......
+    padding: 30px 0 50px 0;
   }
 }
