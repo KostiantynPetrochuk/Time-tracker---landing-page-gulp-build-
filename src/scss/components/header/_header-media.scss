@@ -1,0 +1,55 @@
+@include big_desktop { // 1790px
+  .header {
+    //......
+  }
+}
+
+@include larger_desktop { // 1600px
+  .header {
+    //......
+  }
+}
+
+@include large_desktop { // 1200px
+  .header {
+    //......
+  }
+}
+
+@include desktop { // 1024px
+  .header {
+    &-iner {
+      align-items: center;
+    }
+
+    &-menu-inner {
+      display: none;
+    }
+
+    &-auth {
+      display: none;
+    }
+
+    &-burger {
+      display: flex;
+    }
+  }
+}
+
+@include tablets { // 768px
+  .header {
+    //......
+  }
+}
+
+@include landscape_phone { // 555px
+  .header {
+    //......
+  }
+}
+
+@include portrait_phone { // 320px
+  .header {
+    //......
+  }
+}

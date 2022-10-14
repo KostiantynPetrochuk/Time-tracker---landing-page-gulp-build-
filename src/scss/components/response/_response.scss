@@ -1,0 +1,134 @@
+.response {
+  padding-top: 173px;
+  padding-bottom: 140px;
+  overflow: hidden;
+
+  &-inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-wrapper {
+    position: relative;
+  }
+
+  &-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include translate-Y(200px, 0);
+
+    &._active {
+      @include translate-Y();
+    }
+
+    &__item {
+      &:nth-child(1) {
+        @include font-s-w(48px, 600);
+      }
+
+      &:nth-child(2) {
+        color: $dark-silver;
+        font-size: 18px;
+        margin-top: 50px;
+        display: inline-block;
+      }
+
+      &_underline {
+        position: relative;
+
+        &:before {
+          content: url('../img/Shape.svg');
+          position: absolute;
+          @include position-t-l(20px, -18px);
+        }
+
+        &:after {
+          content: 'client';
+          position: absolute;
+          @include position-t-l(-1px);
+        }
+      }
+    }
+  }
+
+  &-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 67px;
+    @include translate-Y(200px, 0);
+
+    &._active {
+      @include translate-Y();
+    }
+  }
+
+  &-col {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+    & .response-col__item {
+      &:nth-child(1) {
+        font-size: 20px;
+        color: $dark-silver;
+        margin: 36px 0;
+      }
+
+      &:nth-child(2) {
+        margin-bottom: 16px;
+        @include font-s-w(24px, 500);
+      }
+
+      &:nth-child(3) {
+        font-size: 18px;
+        color: $dark-silver;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+
+    &:nth-child(1) {
+      @include position-t-l(54px, 213px);
+    }
+
+    &:nth-child(2) {
+      @include position-t-l(-119px, 43px);
+      @include translate-X(-300px, 0);
+
+      &._active {
+        @include translate-X();
+      }
+    }
+
+    &:nth-child(3) {
+      @include position-t-l(334px, 647px);
+      @include translate-Y(200px, 0);
+
+      &._active {
+        @include translate-X();
+      }
+    }
+
+    &:nth-child(4) {
+      @include position-b-r(-86px, 86px);
+      @include translate-Y(200px, 0);
+
+      &._active {
+        @include translate-Y();
+      }
+    }
+
+    &:nth-child(5) {
+      @include position-b-r(-42px, 121px);
+      @include translate-X(200px, 0);
+
+      &._active {
+        @include translate-Y();
+      }
+    }
+  }
+}

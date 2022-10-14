@@ -1,0 +1,226 @@
+.banner {
+  height: 1066px;
+  background-color: $main-background;
+  overflow: hidden;
+  transition: 0.3s;
+  padding-top: 100px;
+
+  &-inner {
+    position: relative;
+  }
+
+  &-top {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &-title {
+    position: relative;
+    @include font-s-w(64px, 700);
+
+    &__item {
+      margin: 22px 0;
+
+      &:nth-child(2) {
+        position: relative;
+        margin: 22px 0;
+        z-index: 2;
+
+        &:before {
+          content: url('../img/Shape.svg');
+          position: absolute;
+          @include position-t-l(20px, 0);
+        }
+
+        &:after {
+          content: 'Tracking';
+          position: absolute;
+          @include position-t-l();
+        }
+      }
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 220px;
+    @include translate-Y(-100px, 0);
+
+    &._active {
+      @include translate-Y();
+    }
+
+    &__text {
+      color: $dark-orange;
+      max-width: 440px;
+    }
+  }
+
+  &__link {
+    background-color: $main-orange;
+    color: $white;
+    padding: 24px 40px;
+    border-radius: 40px;
+    margin-top: 68px;
+  }
+
+  &-images {
+    position: absolute;
+    @include position-t-l();
+    @include position-b-r();
+  }
+
+  &__image {
+    position: absolute;
+
+    &:nth-child(1) {
+      @include position-t-l(100px, 200px);
+      @include translate-X(-100px, 0);
+
+      &._active {
+        @include translate-X();
+      }
+    }
+
+    &:nth-child(2) {
+      @include position-t-l(130px, 330px);
+      @include translate-Y(-150px, 0);
+
+      &._active {
+        @include translate-Y();
+      }
+    }
+
+    &:nth-child(3) {
+      @include position-t-r(0, -15px);
+      @include translate-X(50px, 0);
+
+      &._active {
+        @include translate-X();
+      }
+    }
+
+    &:nth-child(4) {
+      height: 926px;
+      @include position-t-r(270px, -115px);
+      @include translate-X(500px, 0);
+
+      &._active {
+        @include translate-X();
+      }
+    }
+
+    &:nth-child(5) {
+      height: 680px;
+      @include position-t-l(290px, 40px);
+      @include translate-X(-500px, 0);
+
+      &._active {
+        @include translate-X();
+      }
+    }
+
+    &:nth-child(6) {
+      @include position-t-l(683px, 636px);
+      opacity: 0;
+
+      &._active {
+        opacity: 1;
+      }
+    }
+
+
+    &:nth-child(7) {
+      @include position-t-r(150px, 290px);
+      opacity: 0;
+
+      &._active {
+        opacity: 1;
+      }
+    }
+
+    &:nth-child(8) {
+      @include position-t-r(650px, 650px);
+      opacity: 0;
+
+      &._active {
+        opacity: 1;
+      }
+    }
+
+    &:nth-child(9) {
+      @include position-t-r(500px, 500px);
+      @include translate-Y(280px, 0);
+
+      &._active {
+        @include translate-Y();
+      }
+    }
+  }
+
+  &-bot {
+    position: absolute;
+    height: 244px;
+    background-color: $white;
+    width: 1496px;
+    border-radius: 0 140px 0 0;
+    @include position-b-l(-450px, -15px);
+
+    &:before {
+      content: '';
+      background-color: $white;
+      height: 110px;
+      width: 600px;
+      position: absolute;
+      @include position-b-r(6px, -550px);
+    }
+
+    &:after {
+      content: '';
+      height: 100px;
+      width: 50px;
+      background-color: $white;
+      position: absolute;
+      transform: rotate(-33deg);
+      @include position-t-r(79px, -15px);
+    }
+  }
+
+  &-bot {
+    &-inner {
+      display: flex;
+      justify-content: space-evenly;
+      height: 244px;
+      align-items: center;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__title {
+      @include font-s-w(48px, 600);
+    }
+
+    &__info {
+      color: $dark-silver;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

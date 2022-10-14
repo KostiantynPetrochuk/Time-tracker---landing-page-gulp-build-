@@ -1,0 +1,74 @@
+@include big_desktop { // 1790px
+  .footer {
+    //......
+  }
+}
+
+@include larger_desktop { // 1600px
+  .footer {
+    //......
+  }
+}
+
+@include large_desktop { // 1200px
+  .footer {
+    //......
+  }
+}
+
+@include desktop { // 1024px
+  .footer {
+    height: initial;
+
+    &-links {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &-top {
+      padding: 50px 0;
+    }
+
+    &__link {
+      margin: 10px;
+    }
+  }
+}
+
+@include tablets { // 768px
+  .footer {
+    &-top {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-links {
+      margin: 20px 0;
+    }
+
+    &-bot {
+      flex-wrap: wrap;
+
+      &-left {
+        margin-bottom: 10px;
+
+        &__link:nth-child(1) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+@include landscape_phone { // 555px
+  .footer {
+    //......
+  }
+}
+
+@include portrait_phone { // 320px
+  .footer {
+    //......
+  }
+}

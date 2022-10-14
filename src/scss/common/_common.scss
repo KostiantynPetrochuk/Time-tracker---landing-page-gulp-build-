@@ -1,0 +1,62 @@
+//Спільні класи для всіх сторінок(контейнер і т.д.)
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+
+  &._active {
+    overflow: hidden;
+  }
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-min {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.anchor {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  height: 40px;
+  width: 40px;
+  background-color: #FF553E;
+  box-shadow: 2px 2px 10px #ff553e;
+  border-radius: 6px;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.35s;
+
+  &._active {
+    opacity: 1;
+  }
+
+  & span {
+    height: 10px;
+    width: 10px;
+    border-left: 2px solid #fff;
+    border-top: 2px solid #fff;
+    transform: rotate(45deg);
+  }
+}
+
+._anim-items {
+  transition: 1s;
+}
+
+._anim-items._active {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}

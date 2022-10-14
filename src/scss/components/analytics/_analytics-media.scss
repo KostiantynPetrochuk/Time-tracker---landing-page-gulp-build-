@@ -1,0 +1,218 @@
+@include big_desktop { // 1790px
+  .analytics {
+    //......
+  }
+}
+
+@include larger_desktop { // 1600px
+  .analytics {
+    &-inner {
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr;
+    }
+
+    &-left {
+      width: 100%;
+      height: 100%;
+
+      &__bground {
+        left: -230px;
+      }
+
+      &__img {
+        &:nth-child(2) {
+          @include position-t-l(-120px, 100px);
+        }
+
+        &:nth-child(3) {
+          left: 0;
+        }
+
+        &:nth-child(4) {
+          @include position-t-l(-168px, 407px);
+        }
+
+        &:nth-child(5) {
+          left: 8px;
+        }
+
+        &:nth-child(6) {
+          @include position-t-l(260px, 286px);
+        }
+
+        &:nth-child(7) {
+          bottom: inherit;
+          @include position-t-l(537px, 187px);
+        }
+
+        &:nth-child(8) {
+          left: -170px;
+        }
+      }
+    }
+
+    &-wrapper {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include large_desktop { // 1200px
+  .analytics {
+    //......
+  }
+}
+
+@include desktop { // 1024px
+  .analytics {
+    &-inner {
+      grid-template-rows: 0.6fr 1fr;
+    }
+
+    &-left {
+      &__bground {
+        background-color: #FFF8F2;
+        position: absolute;
+        top: -19px;
+        @include size(328px, 603px);
+      }
+
+      &__img {
+        &:nth-child(2) {
+          height: 500px;
+        }
+
+        &:nth-child(4) {
+          height: 150px;
+          @include position-t-l(-160px, 286px);
+        }
+
+        &:nth-child(5) {
+          height: 122px;
+          @include position-t-l(20px, 34px);
+        }
+
+        &:nth-child(6) {
+          height: 130px;
+          @include position-t-l(85px, 217px);
+        }
+
+        &:nth-child(7) {
+          height: 55px;
+          bottom: inherit;
+          @include position-t-l(279px, 160px);
+        }
+      }
+    }
+  }
+}
+
+@include tablets { // 768px
+  .analytics {
+    &-right {
+      padding-top: 80px;
+    }
+
+    &-row {
+      margin: 24px 0;
+
+      &-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      &-text {
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+
+      &__img {
+        @include size(30px, 30px);
+      }
+
+      &-img-inner {
+        border-radius: 10px;
+        @include size(56px, 56px);
+      }
+    }
+
+    &-info {
+      max-width: 400px;
+      margin-top: 25px;
+
+      &__item {
+        font-size: 16px;
+      }
+    }
+
+    &-title__item {
+      font-size: 25px;
+
+      &_underline {
+        color: $white;
+
+        &:before {
+          content: url('../img/Shape-2.svg');
+          @include position-t-l(10px, -142px);
+        }
+
+        &:after {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+@include landscape_phone { // 555px
+  .analytics {
+    &-wrapper {
+      margin-top: 134px;
+    }
+
+    &-left {
+      &__bground {
+        @include size(244px, 496px);
+      }
+
+      &__img {
+        &:nth-child(2) {
+          height: 335px;
+          @include position-t-l(-77px, 80px);
+        }
+
+        &:nth-child(3) {
+          height: 100px;
+          @include position-t-l(-128px, 1px);
+        }
+
+        &:nth-child(4) {
+          height: 100px;
+          @include position-t-l(-110px, 208px);
+        }
+
+        &:nth-child(5) {
+          height: 100px;
+          @include position-t-l(-1px, 22px);
+        }
+
+        &:nth-child(6) {
+          height: 93px;
+          @include position-t-l(57px, 147px);
+        }
+
+        &:nth-child(7) {
+          height: 37px;
+          bottom: inherit;
+          @include position-t-l(190px, 124px);
+        }
+      }
+    }
+  }
+}
+
+@include portrait_phone { // 320px
+  .analytics {
+    //......
+  }
+}

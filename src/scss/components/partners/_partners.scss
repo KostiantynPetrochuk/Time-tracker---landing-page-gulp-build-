@@ -1,0 +1,148 @@
+.partners {
+  background-color: $partners-background;
+  padding-bottom: 250px;
+  overflow: hidden;
+
+  &-right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 638px;
+    padding: 248px 106px 0 0;
+  }
+
+  &__title {
+    @include font-s-w(48px, 700);
+
+    &_underline {
+      position: relative;
+
+      &:before {
+        content: url('../img/Shape.svg');
+        position: absolute;
+        @include position-t-l(17px, 59px);
+      }
+
+      &:after {
+        content: 'Our Trusted';
+        position: absolute;
+        @include position-t-l(-1px);
+      }
+    }
+  }
+
+  &__info {
+    line-height: 1.7;
+    max-width: 465px;
+    font-size: 18px;
+    color: rgba(64, 64, 64, 0.744);
+    margin-top: 40px;
+    @include translate-Y(150px, 0);
+
+    &._active {
+      @include translate-Y();
+    }
+  }
+
+  &__link {
+    height: 76px;
+    width: 184px;
+    border: 1px solid $main-orange;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $main-orange;
+    margin-top: 50px;
+    @include font-s-w(18px, 600);
+    @include translate-Y(150px, 0);
+
+    &._active {
+      @include translate-Y();
+    }
+  }
+
+  &-images {
+    position: relative;
+  }
+
+
+  &-image-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    &:nth-child(1) {
+      height: 152px;
+      width: 240px;
+      background-color: $partners-item-background_1;
+      border-radius: 40px;
+      @include position-t-l(92px, 183px);
+      @include translate-X(-200px, 0);
+
+      &._active {
+        @include translate-X();
+      }
+    }
+
+    &:nth-child(2) {
+      height: 204px;
+      width: 315px;
+      background-color: $partners-item-background_2;
+      border-radius: 48px;
+      @include position-t-l(180px, 474px);
+      @include translate-X(150px, 0);
+
+      &._active {
+        @include translate-X();
+      }
+    }
+
+    &:nth-child(3) {
+      height: 240px;
+      width: 358px;
+      background-color: $partners-item-background_3;
+      border-radius: 54px;
+      @include position-t-l(300px, 64px);
+      @include translate-X(-150px, 0);
+
+      &._active {
+        @include translate-X();
+      }
+    }
+
+    &:nth-child(4) {
+      height: 243px;
+      width: 358px;
+      background-color: $partners-item-background_4;
+      border-radius: 54px;
+      @include position-t-l(440px, 474px);
+      @include translate-X(150px, 0);
+
+      &._active {
+        @include translate-X();
+      }
+    }
+
+    &:nth-child(5) {
+      height: 152px;
+      width: 240px;
+      background-color: $partners-item-background_5;
+      border-radius: 54px;
+      @include position-t-l(600px, 180px);
+      @include translate-X(-150px, 0);
+
+      &._active {
+        @include translate-X();
+      }
+    }
+  }
+
+  &-title-inner {
+    @include translate-Y(150px, 0);
+
+    &._active {
+      @include translate-Y();
+    }
+  }
+}

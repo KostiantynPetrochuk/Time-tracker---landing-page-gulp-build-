@@ -1,0 +1,219 @@
+.features {
+  &-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @include translate-Y(100px);
+
+    &._active {
+      @include translate-Y();
+    }
+
+    &__item {
+      &:nth-child(1) {
+        position: relative;
+        @include font-s-w(48px, 600);
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        font-size: 18px;
+        color: #404040c4;
+        margin-top: 20px;
+      }
+
+      &_underline {
+        position: relative;
+        color: transparent;
+
+        &:before {
+          content: url('../img/Shape.svg');
+          position: absolute;
+          top: 15px;
+        }
+
+        &:after {
+          content: 'Features';
+          position: absolute;
+          @include position-t-l(-1px);
+          @include position-b-r();
+          color: $black;
+        }
+      }
+    }
+  }
+
+  &-wrapper {
+    position: relative;
+    margin-top: 165px;
+
+    &__img {
+      position: absolute;
+
+      &:nth-child(1) {
+        opacity: 0;
+        @include position-t-r(204px, 515px);
+
+        &._active {
+          opacity: 1;
+          @include position-t-r(-20px, 230px);
+        }
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+        @include position-t-l(-150px, -100px);
+
+        &._active {
+          opacity: 1;
+          @include position-t-l(-150px);
+        }
+      }
+    }
+  }
+
+  &-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 64px;
+  }
+
+  &-card {
+    &-wrapper {
+      perspective: 1000px;
+
+      &:nth-child(1) {
+        & .features-card-front,
+        & .features-card-back {
+          background-color: $light-blue;
+        }
+      }
+
+      &:nth-child(2) {
+        & .features-card-front,
+        & .features-card-back {
+          background-color: $dark-blue;
+          transition-delay: 0.2s;
+        }
+
+        & .features-card-front .features-card-img-inner {
+          &:before {
+            background-color: $violet;
+          }
+
+          &:after {
+            content: url('../img/bell_1.svg');
+            position: absolute;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        & .features-card-front,
+        & .features-card-back {
+          background-color: $light-orange;
+          transition-delay: 0.4s;
+        }
+
+        & .features-card-front .features-card-img-inner {
+          &:before {
+            background-color: $white-orange;
+          }
+
+          &:after {
+            content: url('../img/agenda_1.svg');
+            position: absolute;
+          }
+        }
+      }
+    }
+
+    &-front {
+      width: 312px;
+      height: 202px;
+      border-radius: 48px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: absolute;
+      backface-visibility: hidden;
+      transform: rotateY(-180deg);
+      opacity: 0;
+
+      &._active {
+        transform: rotateY(0deg);
+        opacity: 1;
+      }
+
+      &:nth-child(1) {
+        & .features-card-img-inner {
+          &:before {
+            background-color: $blue-background;
+          }
+
+          &:after {
+            content: url('../img/task-list.svg');
+            position: absolute;
+          }
+        }
+      }
+    }
+
+    &-back {
+      width: 312px;
+      height: 202px;
+      padding: 28px;
+      border-radius: 48px;
+      backface-visibility: hidden;
+      opacity: 0;
+      transform: rotateY(0deg);
+
+      &._active {
+        transform: rotateY(180deg);
+        opacity: 1;
+      }
+    }
+
+    &-title {
+      display: flex;
+      flex-direction: column;
+
+      &:nth-child(1) {
+        color: $white;
+        @include font-s-w(28px, 600);
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        color: $white;
+        font-size: 18px;
+        margin-top: 6px;
+      }
+    }
+
+    &-img-inner {
+      height: 88px;
+      width: 88px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      border: double 1px transparent;
+      border-radius: 24px;
+      background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.832), rgb(255, 255, 255, .5));
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+
+      &:before {
+        content: '';
+        position: absolute;
+        height: 87px;
+        width: 86px;
+        border-radius: 24px;
+        bottom: 0;
+      }
+    }
+  }
+}

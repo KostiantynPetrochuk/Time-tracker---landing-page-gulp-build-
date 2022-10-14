@@ -1,0 +1,120 @@
+@include big_desktop { // 1790px
+  .apps {
+    &__img {
+      &:nth-child(1) {
+        &._active {
+          left: -118px;
+        }
+      }
+
+      &:nth-child(2) {
+        &._active {
+          transform: translateX(103px);
+        }
+      }
+
+      &:nth-child(3) {
+        right: 374px;
+      }
+    }
+
+    &-inner {
+      margin-left: 50px;
+    }
+  }
+}
+
+@include larger_desktop { // 1600px
+  .apps {
+    &-inner {
+      align-items: center;
+      padding: 50px 0;
+    }
+
+    &__info {
+      max-width: 395px;
+    }
+
+    &__img {
+      &:nth-child(1) {
+        display: none;
+      }
+
+      &:nth-child(2) {
+        height: 110px;
+        @include position-t-r(114px, 80px);
+      }
+
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+}
+
+@include large_desktop { // 1200px
+  .apps {
+    &-inner {
+      align-items: flex-start;
+    }
+  }
+}
+
+@include desktop { // 1024px
+  .apps {
+    //......
+  }
+}
+
+@include tablets { // 768px
+  .apps {
+    &__title {
+      font-size: 24px;
+
+      &_underline {
+        color: transparent;
+
+        &:before {
+          content: url('../img/Shape-2.svg');
+          font-size: 24px;
+          @include position-t-l(9px, 9px);
+        }
+
+        &:after {
+          color: $black;
+        }
+      }
+    }
+
+    &__info {
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    &-link {
+      margin: 16px 0;
+    }
+
+    &__img:nth-child(2) {
+      height: 60px;
+      top: 180px;
+    }
+
+    &-links {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  }
+}
+
+@include landscape_phone { // 555px
+  .apps {
+    //......
+  }
+}
+
+@include portrait_phone { // 320px
+  .apps {
+    //......
+  }
+}

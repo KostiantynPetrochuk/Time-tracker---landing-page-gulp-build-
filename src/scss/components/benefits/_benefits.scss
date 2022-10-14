@@ -1,0 +1,190 @@
+.benefits {
+  background-color: $white-blue;
+  overflow: hidden;
+
+  &-wrapper {
+    padding-bottom: 140px;
+    position: relative;
+  }
+
+  &-content-inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-title {
+    display: flex;
+    flex-direction: column;
+    padding-top: 140px;
+    @include translate-Y(100px, .2);
+
+    &._active {
+      @include translate-Y();
+    }
+
+    &__item {
+      &:nth-child(1) {
+        @include font-s-w(48px, 600);
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        font-size: 18px;
+        color: #404040cb;
+        margin-top: 24px;
+      }
+
+      &_underline {
+        position: relative;
+
+        &:before {
+          content: url('../img/Shape.svg');
+          position: absolute;
+          @include position-t-l(15px, 0);
+        }
+
+        &:after {
+          content: 'Tracker';
+          position: absolute;
+          @include position-t-l(-1px, 0);
+        }
+      }
+    }
+  }
+
+  &-col {
+    margin: 64px 0;
+    display: flex;
+    @include translate-X(200px, 0);
+
+    &._active {
+      @include translate-X();
+    }
+
+    &:nth-child(1) {
+      & .benefits-logo-inner {
+        background-color: $green;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-left: 174px;
+
+      & .benefits-logo-inner {
+        background-color: $pink;
+      }
+    }
+
+    &:nth-child(3) {
+      & .benefits-logo-inner {
+        background-color: #6B72FF;
+      }
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      margin-left: 48px;
+    }
+
+    &__text {
+      margin-top: 23px;
+    }
+
+    &__title {
+      @include font-s-w(28px, 600);
+      color: #404040;
+      margin-bottom: 0;
+    }
+
+    //----benefits-col-------
+  }
+
+  &-logo-inner {
+    height: 116px;
+    width: 116px;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    position: absolute;
+
+    &:nth-child(1) {
+      @include position-t-l(340px, -130px);
+      @include translate-X(-150px, 0);
+
+      &._active {
+        @include translate-X();
+      }
+    }
+
+    &:nth-child(2) {
+      @include position-t-l(370px, 806px);
+    }
+
+    &:nth-child(3) {
+      @include position-t-l(600px, 246px);
+    }
+
+    &:nth-child(4) {
+      @include position-t-r(272px, 558px);
+      @include translate-Y(-200px, 0);
+
+      &._active {
+        @include translate-Y();
+      }
+    }
+
+    &:nth-child(5) {
+      @include position-t-r(580px, 558px);
+      @include translate-Y(200px, 0);
+
+      &._active {
+        @include translate-Y();
+      }
+    }
+
+    &:nth-child(6) {
+      @include position-t-r(360px, 130px);
+      @include translate-X(200px, 0);
+
+      &._active {
+        @include translate-X();
+      }
+    }
+
+    &:nth-child(7) {
+      @include position-t-r(-42px, -203px);
+      @include translate-X(100px, 0);
+
+      &._active {
+        @include translate-X();
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

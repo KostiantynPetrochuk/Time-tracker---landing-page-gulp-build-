@@ -1,0 +1,188 @@
+.analytics {
+  overflow: hidden;
+
+  &-wrapper {
+    display: flex;
+    margin-top: 190px;
+    margin-bottom: 150px;
+  }
+
+  &-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    position: relative;
+  }
+
+  &-title {
+    @include translate-Y(120px, .2);
+
+    &._active {
+      @include translate-Y();
+    }
+
+    &__item {
+      @include font-s-w(48px, 700);
+      display: inline-block;
+      flex-direction: column;
+
+      &_underline {
+        position: relative;
+
+        &:before {
+          content: url('../img/Shape.svg');
+          position: absolute;
+          @include position-t-l(20px, -27px);
+        }
+
+        &:after {
+          content: 'Reporting';
+          position: absolute;
+          @include position-t-l(-1px, 0);
+        }
+      }
+    }
+
+  }
+
+  &-info {
+    margin-top: 50px;
+    @include translate-Y(120px, .2);
+
+    &._active {
+      @include translate-Y();
+    }
+
+    &__item {
+      font-size: 18px;
+      color: $dark-silver;
+      margin: 5px 0;
+      display: inline-block;
+    }
+  }
+
+  &-row {
+    display: flex;
+    margin: 64px 0;
+    @include translate-X(500px, 0);
+
+    &._active {
+      @include translate-X();
+    }
+
+    &:nth-child(1) .analytics-row-img-inner {
+      background-color: $light-orange;
+    }
+
+    &:nth-child(2) .analytics-row-img-inner {
+      background-color: $light-blue;
+    }
+
+    &:nth-child(3) .analytics-row-img-inner {
+      background-color: $yellow;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      margin-left: 24px;
+      justify-content: space-between;
+    }
+
+    &-title {
+      @include font-s-w(28px, 700);
+    }
+
+    &-img-inner {
+      height: 88px;
+      width: 88px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+    }
+  }
+
+  &-right {
+    overflow: hidden;
+
+    &-inner {
+      max-width: 568px;
+    }
+  }
+
+  &-left {
+    &__img {
+      &:nth-child(2) {
+        position: absolute;
+        @include position-t-l(-60px, -75px);
+        @include translate-Y(20%, 0);
+
+        &._active {
+          @include translate-Y();
+        }
+      }
+
+      &:nth-child(3) {
+        position: absolute;
+        @include position-t-l(-125px, -180px);
+      }
+
+      &:nth-child(4) {
+        position: absolute;
+        @include position-t-l(-120px, 225px);
+        @include translate-X(50px, 0);
+
+        &._active {
+          @include translate-X();
+        }
+      }
+
+      &:nth-child(5) {
+        position: absolute;
+        @include position-t-l(116px, -168px);
+        @include translate-X(-100px, 0);
+
+        &._active {
+          @include translate-X();
+        }
+      }
+
+      &:nth-child(6) {
+        position: absolute;
+        @include position-t-l(260px, 110px);
+        @include translate-X(100px, 0);
+
+        &._active {
+          @include translate-X();
+        }
+      }
+
+      &:nth-child(7) {
+        position: absolute;
+        @include position-b-l(58px, 16px);
+        @include translate-X(250px, 0);
+
+        &._active {
+          @include translate-X();
+        }
+
+        &:nth-child(8) {
+          position: absolute;
+          @include position-b-l(90px, 400px);
+        }
+      }
+    }
+
+    &__bground {
+      height: 616px;
+      width: 776px;
+      background-color: $main-background;
+      position: absolute;
+      @include position-t-l(0, -390px);
+    }
+  }
+}
+
+
+

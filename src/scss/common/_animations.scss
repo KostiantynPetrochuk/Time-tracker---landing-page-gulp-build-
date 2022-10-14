@@ -1,0 +1,24 @@
+@keyframes header {
+  100% {
+    @include translate-Y();
+  }
+}
+
+@keyframes burger-item-top {
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes burger-item-bot {
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes banner-info {
+  100% {
+    @include translate-Y();
+  }
+}
+

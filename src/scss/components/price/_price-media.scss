@@ -1,0 +1,138 @@
+@include big_desktop { // 1790px
+  .price {
+    //......
+  }
+}
+
+@include larger_desktop { // 1600px
+  .price {
+    &-cards {
+      justify-content: space-around;
+    }
+
+    &-card {
+      height: 214px;
+      width: 273px;
+      border-radius: 30px;
+      display: grid;
+      padding: 36px 26px;
+      grid-template-rows: 0.5fr 0.5fr 0.5fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+            "title price"
+            "info_1 info_1"
+            "info_2 info_2"
+            "link link";
+    }
+
+    &-row {
+      &:nth-child(1) {
+        grid-area: title;
+        font-size: 20px;
+      }
+
+      &:nth-child(2) {
+        grid-area: info_1;
+        font-size: 18px;
+      }
+
+      &:nth-child(3) {
+        grid-area: info_2;
+        font-size: 18px;
+      }
+
+      &:nth-child(4) {
+        grid-area: price;
+        margin-left: 37px;
+      }
+
+      &:nth-child(5) {
+        grid-area: link;
+        margin-left: 15px;
+      }
+
+      &__number {
+        font-size: 28px;
+      }
+
+      &__item {
+        top: 7px;
+      }
+    }
+
+    &__img {
+      &:nth-child(1) {
+        @include position-t-l(0, -179px);
+      }
+
+      &:nth-child(2) {
+        height: 100px;
+        @include position-t-r(216px, -10px);
+      }
+
+      &:nth-child(3) {
+        height: 170px;
+
+        &._active {
+          @include position-t-r(128px, 10px);
+        }
+      }
+    }
+  }
+}
+
+@include large_desktop { // 1200px
+  .price {
+    &-top {
+      margin-top: 50px;
+    }
+  }
+}
+
+@include desktop { // 1024px
+  .price {
+    &-card {
+      margin: 14px;
+    }
+
+    &-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+@include tablets { // 768px
+  .price {
+    &__img {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+
+    &__title {
+      font-size: 24px;
+
+      &_underline:before {
+        content: url('../img/Shape-2.svg');
+        @include position-t-l(10px, 37px);
+      }
+    }
+  }
+}
+
+@include landscape_phone { // 555px
+  .price {
+    &__title {
+      font-size: 23px;
+    }
+  }
+}
+
+@include portrait_phone { // 320px
+  .price {
+    //......
+  }
+}

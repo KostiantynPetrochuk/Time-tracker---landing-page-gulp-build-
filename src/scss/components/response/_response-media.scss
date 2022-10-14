@@ -1,0 +1,142 @@
+@include big_desktop { // 1790px
+  .response {
+    //......
+  }
+}
+
+@include larger_desktop { // 1600px
+  .response {
+    &__img:nth-child(3) {
+      left: 430px;
+    }
+  }
+}
+
+@include large_desktop { // 1200px
+  .response {
+    padding-top: 50px;
+
+    &-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-col {
+      max-width: 556px;
+    }
+
+    &__img {
+      &:nth-child(1) {
+        height: 120px;
+        @include position-t-l(100px, 60px);
+      }
+
+      &:nth-child(2) {
+        height: 150px;
+        @include position-t-l(-39px, -7px);
+      }
+
+      &:nth-child(3) {
+        height: 150px;
+        @include position-t-l(539px, 514px);
+      }
+    }
+  }
+}
+
+@include desktop { // 1024px
+  .response {
+    &-row {
+      margin-top: 260px;
+    }
+
+    &-title__item:nth-child(2) {
+      display: none;
+    }
+
+    &__img {
+      &:nth-child(1) {
+        height: 120px;
+        @include position-t-l(193px, 381px);
+      }
+
+      &:nth-child(2) {
+        height: 150px;
+        @include position-t-l(78px, 110px);
+      }
+
+      &:nth-child(3) {
+        @include position-t-l(197px, 642px);
+      }
+
+      &:nth-child(4),
+      &:nth-child(5) {
+        display: none;
+      }
+    }
+  }
+}
+
+@include tablets { // 768px
+  .response {
+    &-title__item {
+      &:nth-child(1) {
+        font-size: 24px;
+      }
+
+      &_underline {
+        color: transparent;
+
+        &:before {
+          content: url('../img/Shape-2.svg');
+        }
+
+        &:after {
+          color: $black;
+        }
+
+      }
+    }
+
+    &__img {
+      &:nth-child(1) {
+        height: 92px;
+        @include position-t-l(292px, 196px);
+      }
+
+      &:nth-child(2) {
+        height: 100px;
+        @include position-t-l(48px, 0);
+      }
+
+      &:nth-child(3) {
+        left: initial;
+        height: 100px;
+        @include position-t-r(520px, -10px);
+      }
+    }
+
+    &-row {
+      margin-top: 100px;
+    }
+
+    &-col {
+      .response-col__item:nth-child(1) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@include landscape_phone { // 555px
+  .response {
+    //......
+  }
+}
+
+@include portrait_phone { // 320px
+  .response {
+    //......
+  }
+}

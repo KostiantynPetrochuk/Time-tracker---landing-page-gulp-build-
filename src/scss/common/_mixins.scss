@@ -1,0 +1,39 @@
+@mixin translate-Y($transform: 0, $opacity: 1) {
+  transform: translateY($transform);
+  opacity: $opacity;
+}
+
+@mixin translate-X($transform: 0, $opacity: 1) {
+  transform: translateX($transform);
+  opacity: $opacity;
+}
+
+@mixin font-s-w($size: 16px, $weight: 400) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin position-t-l($top: 0, $left: 0) {
+  top: $top;
+  left: $left;
+}
+
+@mixin position-t-r($top: 0, $right: 0) {
+  top: $top;
+  right: $right;
+}
+
+@mixin position-b-l($bottom: 0, $left: 0) {
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin position-b-r($bottom: 0, $right: 0) {
+  bottom: $bottom;
+  right: $right;
+}
+
+@mixin size($height, $width) {
+  height: $height;
+  width: $width;
+}

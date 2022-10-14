@@ -1,0 +1,201 @@
+@include big_desktop { // 1790px
+  .features {
+    //......
+  }
+}
+
+@include larger_desktop { // 1600px
+  .features {
+    &-wrapper__img {
+      &:nth-child(1) {
+        @include position-t-r(204px, 290px);
+
+        &._active {
+          @include position-t-r(-20px, 45px);
+        }
+      }
+    }
+  }
+}
+
+@include large_desktop { // 1200px
+  .features {
+    &-wrapper {
+      margin-top: 0;
+
+      &__img:nth-child(1) {
+        @include position-t-r(204px, 290px);
+
+        &._active {
+          @include position-t-r(96px, 58px);
+        }
+      }
+    }
+
+    &-card {
+      &-front {
+        height: 180px;
+        width: 323px;
+        padding: 20px;
+        border-radius: 30px;
+
+        .features-card-img-inner:before {
+          height: 60px;
+          width: 60px;
+          border-radius: 15px;
+        }
+      }
+
+      &-back {
+        height: 180px;
+        width: 323px;
+        padding: 20px;
+        border-radius: 30px;
+      }
+
+      &-title {
+        &:nth-child(1) {
+          font-size: 20px;
+        }
+
+        &:nth-child(2) {
+          font-size: 16px;
+        }
+
+        &:nth-child(3) {
+          font-size: 16px;
+        }
+      }
+
+      &-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+
+        &__img {
+          &:nth-child(1) {
+            @include position-t-r(204px, 290px);
+          }
+        }
+
+        &:nth-child(1) {
+          .features-card-front {
+            .features-card-img-inner:after {
+              content: url('../img/task-list-mini.svg');
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          .features-card-front {
+            .features-card-img-inner:after {
+              content: url('../img/bell-1-mini.svg');
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          .features-card-front {
+            .features-card-img-inner:after {
+              content: url('../img/agenda-1-mini.svg');
+            }
+          }
+        }
+      }
+
+      &-img-inner {
+        height: 60px;
+        width: 60px;
+        border-radius: 15px;
+      }
+    }
+
+    &-cards {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@include desktop { // 1024px
+  .features {
+    &-title__item:nth-child(1) {
+      font-size: 40px;
+    }
+
+    &-wrapper__img:nth-child(1) {
+      @include position-t-l(400px, -225px);
+      height: 150px;
+      opacity: 1;
+      right: inherit;
+
+      &._active {
+        @include position-t-l(206px, -20px);
+      }
+    }
+  }
+}
+
+@include tablets { // 768px
+  .features {
+    &-inner {
+      padding-top: 20px;
+    }
+
+    &-wrapper__img {
+      &:nth-child(1) {
+        right: inherit;
+        height: 100px;
+        opacity: 1;
+        @include position-t-l(400px, -225px);
+
+        &._active {
+          @include position-t-l(134px, -20px);
+        }
+      }
+
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+
+    &-title__item {
+      font-size: 16px;
+
+      &:nth-child(1) {
+        font-size: 25px;
+      }
+
+      &_underline:before {
+        content: url('../img/Shape-2.svg');
+        top: 10px;
+      }
+    }
+  }
+}
+
+@include landscape_phone { // 555px
+  .features {
+    margin-top: 0px;
+
+    &-card {
+      &-front,
+      &-back {
+        padding: 20px;
+        border-radius: 30px;
+        @include size(140px, 283px);
+      }
+    }
+
+    &-wrapper__img:nth-child(1) {
+      top: -90px;
+      height: 80px;
+    }
+  }
+}
+
+@include portrait_phone { // 320px
+  .features {
+    //......
+  }
+}

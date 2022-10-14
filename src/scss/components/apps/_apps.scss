@@ -1,0 +1,131 @@
+.apps {
+  background-color: $main-background;
+  overflow: hidden;
+
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    padding-top: 248px;
+    padding-bottom: 138px;
+  }
+
+  &__title {
+    @include font-s-w(48px, 600);
+    @include translate-Y(200px, 0);
+
+    &._active {
+      @include translate-Y();
+    }
+
+    &_underline {
+      position: relative;
+
+      &:before {
+        content: url('../img/Shape.svg');
+        position: absolute;
+        @include position-t-l(22px, -18px);
+      }
+
+      &:after {
+        content: 'For free';
+        position: absolute;
+        @include position-t-l(-1px, 0);
+      }
+    }
+  }
+
+  &__info {
+    font-size: 20px;
+    color: #404040c7;
+    max-width: 530px;
+    margin-top: 50px;
+    @include translate-Y(200px, 0);
+
+    &._active {
+      @include translate-Y();
+    }
+  }
+
+  &-links {
+    display: flex;
+    margin-top: 50px;
+    width: 395px;
+    justify-content: space-between;
+  }
+
+  &-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 73px;
+    width: 180px;
+    border: 1px solid $main-orange;
+    border-radius: 40px;
+
+    &:nth-child(1) {
+      background-color: $main-orange;
+      color: $white;
+      @include translate-X(-200px, 0);
+
+      &._active {
+        @include translate-X();
+      }
+    }
+
+    &:nth-child(2) {
+      color: $main-orange;
+      @include translate-X(200px, 0);
+
+      &._active {
+        @include translate-X();
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+
+      &__item:nth-child(1) {
+        font-size: 10px;
+      }
+    }
+
+    &__logo {
+      margin-right: 9px;
+    }
+  }
+
+  &-wrapper {
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+
+    &:nth-child(1) {
+      @include position-t-l(-100px, -340px);
+
+      &._active {
+        @include position-t-l(0, -74px);
+      }
+    }
+
+    &:nth-child(2) {
+      @include position-t-r(278px, -15px);
+      @include translate-X(200px, 0);
+
+      &._active {
+        @include translate-X();
+      }
+    }
+
+    &:nth-child(3) {
+      @include position-t-r(86px, 509px);
+      @include translate-Y(200px, 0);
+
+      &._active {
+        @include translate-Y();
+      }
+    }
+  }
+}
